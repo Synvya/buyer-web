@@ -27,7 +27,7 @@ const suggestedActions = [
   },
   {
     title: "Ride a steam engine train",
-    label: "Embark on a scenic journey through the picturesque Upper Snoqualmie Valley",
+    label: "A scenic journey through the Upper Snoqualmie Valley",
     action: "What are my options for riding a steam engine train in Snoqualmie, WA?",
   },
   {
