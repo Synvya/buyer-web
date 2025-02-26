@@ -21,14 +21,14 @@ import { Textarea } from "./ui/textarea";
 
 const suggestedActions = [
   {
-    title: "What is the weather",
-    label: "in San Francisco?",
-    action: "What is the weather in San Francisco?",
+    title: "I need some coffee ☕️",
+    label: "Find me a coffee shop nearby",
+    action: "Provide the information about a coffee merchant Snoqualmie, WA",
   },
   {
-    title: "How is python useful",
-    label: "for AI engineers?",
-    action: "How is python useful for AI engineers?",
+    title: "Did anyone say pizza?",
+    label: "Find me a pizza place nearby",
+    action: "Provide the name and address of an italian restaurant in Snoqualmie, WA",
   },
 ];
 

@@ -2,6 +2,16 @@
   "functions": {
     "api/**": {
       "excludeFiles": "{.next,.git,node_modules}/**"
+    },
+    "api/index.py": {
+      "maxDuration": 300,
+      "memory": 3008,
+      "timeout": 300
+    },
+    "app/og/route.tsx": {
+      "maxDuration": 300,
+      "memory": 3008,
+      "timeout": 300
     }
   }
 }
