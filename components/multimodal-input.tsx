@@ -21,12 +21,17 @@ import { Textarea } from "./ui/textarea";
 
 const suggestedActions = [
   {
+    title: "I'm visiting a friend in Snoqualmie",
+    label: "Can you recommend some plans for tomorrow?",
+    action: "I'm visiting a friend in Snoqualmie, WA. Can you recommend some plans for tomorrow?",
+  },
+  {
     title: "I need some coffee ☕️",
     label: "Find me a coffee shop nearby",
     action: "Provide the information about a coffee merchant Snoqualmie, WA",
   },
   {
-    title: "Did anyone say pizza?",
+    title: "Did anyone say pizza? 🍕",
     label: "Find me a pizza place nearby",
     action: "Provide the name and address of an italian restaurant in Snoqualmie, WA",
   },
