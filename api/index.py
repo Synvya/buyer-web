@@ -271,19 +271,19 @@ async def lifespan(app: FastAPI):
 app.router.lifespan_context = lifespan
 
 
-@app.middleware("http")
-async def timeout_middleware(request: Request, call_next):
-    """
-    Middleware to handle request timeouts.
-    """
-    try:
-        return await asyncio.wait_for(
-            call_next(request), timeout=300  # 5-minute timeout per request
-        )
-    except asyncio.TimeoutError as exc:
-        raise HTTPException(
-            status_code=504, detail="Server processing timeout"
-        ) from exc
+# @app.middleware("http")
+# async def timeout_middleware(request: Request, call_next):
+#     """
+#     Middleware to handle request timeouts.
+#     """
+#     try:
+#         return await asyncio.wait_for(
+#             call_next(request), timeout=300  # 5-minute timeout per request
+#         )
+#     except asyncio.TimeoutError as exc:
+#         raise HTTPException(
+#             status_code=504, detail="Server processing timeout"
+#         ) from exc
 
 
 @app.post("/api/chat")
