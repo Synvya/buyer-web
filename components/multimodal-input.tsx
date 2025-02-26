@@ -26,6 +26,11 @@ const suggestedActions = [
     action: "I'm visiting a friend in Snoqualmie, WA. Can you recommend some plans for tomorrow?",
   },
   {
+    title: "Ride a steam engine train",
+    label: "Embark on a scenic journey through the picturesque Upper Snoqualmie Valley",
+    action: "What are my options for riding a steam engine train in Snoqualmie, WA?",
+  },
+  {
     title: "I need some coffee ☕️",
     label: "Find me a coffee shop nearby",
     action: "Provide the information about a coffee merchant Snoqualmie, WA",
