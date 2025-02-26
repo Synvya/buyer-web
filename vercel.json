@@ -9,8 +9,7 @@
     },
     "app/og/route.tsx": {
       "maxDuration": 300,
-      "memory": 3008,
-      "timeout": 300
+      "memory": 3008
     }
   }
 }
