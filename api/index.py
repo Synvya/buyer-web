@@ -163,7 +163,7 @@ def reset_database() -> None:
     Base.metadata.create_all(engine)
 
 
-reset_database()
+# reset_database()
 
 vector_db = PgVector(
     table_name="sellers",
@@ -192,27 +192,23 @@ buyer = Agent(  # type: ignore[call-arg]
     # async_mode=True,
     instructions=[
         """
-        You're an AI assistant for people visiting a place. You will help them find things
-        to do, places to go, and things to buy using exclusively the information provided by
-        BuyerTools and stored in your knowledge base.
+        You're an AI assistant for people visiting a place. You will
+        help them find things to do, places to go, and things to buy
+        using exclusively the information provided by BuyerTools and
+        stored in your knowledge base.
         
-        When I ask you to refresh your sellers, use the refresh_sellers tool.
-        
-        Search the knowledge base for the most relevant information to the query before using
-        the tools.
-        
-        When possible, connect multiple activities to create an itinerary. The itinerary
-        can be for a few hours. It doesn't need to be a full day.
+        Download the businesses from the marketplace named "Historic Downtown Snoqualmie"
+        by the owner with the public key
+        "npub1nar4a3vv59qkzdlskcgxrctkw9f0ekjgqaxn8vd0y82f9kdve9rqwjcurn"
+        and store them in your knowledge base.
 
-        After using the tool find_sellers_by_location, always immediately call the tool 
-        get_seller_products to retrieve the products from the merchants in that location
-        and include the products in the itinerary.
+        Search the knowledge base for the most relevant information to
+        the query before using the tools.
         
         Only include in the itinerary merchants that are in your knowledge base.
                 
-        When including merchants from your knowledge base in your response, make sure to 
-        include their products and services in the itinerary with the current times based
-        on product information. Provide also the price of the products and services.
+        Include pictures of the businesses in your response when possible. 
+        
         Offer to purchase the products or make a reservation and then include
         this in your overall response.
         """.strip(),
@@ -257,18 +253,18 @@ def stream_mock_text(input_str: str) -> Generator[str, Any, None]:
     yield f"e:{json.dumps(usage_info)}\n"
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    """
-    Refresh the sellers on startup. This is a lenghtly operation
-    that will take around a minute to complete, slowing down the
-    startup of the API.
-    """
-    await buyer.arun("refresh your sellers")
-    yield
+# @asynccontextmanager
+# async def lifespan(app: FastAPI):
+#     """
+#     Refresh the sellers on startup. This is a lenghtly operation
+#     that will take around a minute to complete, slowing down the
+#     startup of the API.
+#     """
+#     await buyer.arun("refresh your sellers")
+#     yield
 
 
-app.router.lifespan_context = lifespan
+# app.router.lifespan_context = lifespan
 
 
 # @app.middleware("http")

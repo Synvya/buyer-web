@@ -1,4 +1,4 @@
-agentstr==0.1.15
+agentstr
 annotated-types==0.7.0
 anyio==4.4.0
 certifi==2024.7.4
