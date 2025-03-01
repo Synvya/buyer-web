@@ -21,24 +21,24 @@ import { Textarea } from "./ui/textarea";
 
 const suggestedActions = [
   {
-    title: "I'm visiting a friend in Snoqualmie",
-    label: "Can you recommend some plans for tomorrow?",
-    action: "I'm visiting a friend in Snoqualmie, WA. Can you recommend some plans for tomorrow?",
+    title: "I'd love some cute souvenirs",
+    label: "Can you recommend a nearby gift / souvenir shop?",
+    action: "Provide information about gift and souvenir shops in Snoqualmie",
   },
   {
     title: "Ride a steam engine train",
     label: "A scenic journey through the Upper Snoqualmie Valley",
-    action: "What are my options for riding a steam engine train in Snoqualmie, WA?",
+    action: "Provide information about train ride tickets sold by Northwest Railway Museum",
   },
   {
     title: "I need some coffee ☕️",
-    label: "Find me a coffee shop nearby",
-    action: "Provide the information about a coffee merchant Snoqualmie, WA",
+    label: "Coffee shops in Snoqualmie",
+    action: "Provide information about coffee shops in Snoqualmie",
   },
   {
-    title: "Did anyone say pizza? 🍕",
-    label: "Find me a pizza place nearby",
-    action: "Provide the name and address of an italian restaurant in Snoqualmie, WA",
+    title: "Did anyone say pasta & pizza? 🍕",
+    label: "Italian cuisine restarants in Snoqualmie",
+    action: "Provide information about all the Italian cuisine restarants in Snoqualmie",
   },
 ];
 
